@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomList {
+
     private List<City> cities;
 
     public CustomList() {
@@ -11,11 +12,23 @@ public class CustomList {
     }
 
     public void addCity(City city) {
-        cities.add(city);
+        if (!cities.contains(city)) {
+            cities.add(city);
+        }
     }
 
-    
+    public boolean hasCity(City city) {
+        return cities.contains(city);
+    }
 
-    // Will be implemented later using TDD (leave blank for now)
-    // public boolean hasCity(City city) { ... }
+    public void deleteCity(City city) {
+        if (!cities.contains(city)) {
+            throw new IllegalArgumentException("City not found in list");
+        }
+        cities.remove(city);
+    }
+
+    public int countCities() {
+        return cities.size();
+    }
 }
