@@ -21,7 +21,9 @@ public class City {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof City)) return false;
+        if (!(o instanceof City)) {
+            return false;
+        }
         City cityObj = (City) o;
         return this.city.equals(cityObj.city)
                 && this.province.equals(cityObj.province);
