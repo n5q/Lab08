@@ -9,7 +9,7 @@ public class CustomListTest {
     public void testHasCity() {
         CustomList list = new CustomList();
         City calgary = new City("Calgary", "AB");
-//        list.addCity(calgary);
+        list.addCity(calgary);
         assertTrue(list.hasCity(calgary));
     }
 
@@ -20,7 +20,7 @@ public class CustomListTest {
         list.addCity(edmonton);
         assertTrue(list.hasCity(edmonton));
 
-        list.deleteCity(edmonton);
+//        list.deleteCity(edmonton);
         assertFalse(list.hasCity(edmonton));
     }
 
